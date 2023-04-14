@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>BB 23 prototyping - 8-high-4</title>
+
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Public+Sans&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://use.typekit.net/gao1ylu.css" />
+
+        <link href="src/sass/app.css" rel="stylesheet" />
+
+        <style>
+            main {
+                background: var(--white);
+            }
+
+            .block-8-high-4 {
+                padding-top: 5rem;
+                padding-bottom: 5rem;
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                column-gap: 20px;
+                background: var(--off-white);
+            }
+
+            .rh-col {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            
+            p {
+                font-family: var(--font-titling);
+                font-size: 1rem;
+                line-height: 1.2;
+            }
+
+            @media (min-width: 600px) {
+                p {
+
+                    --a: 16; 
+                    --b: 24; 
+                    --x: 800; 
+                    --y: 1440; 
+
+                    --sum1: calc( (var(--b) - var(--a)) / (var(--y) - var(--x)) );
+                    --sum2: calc(var(--sum1) * var(--x));
+                    --sum3: calc(var(--a) - var(--sum2)) / 16 * 1rem;
+
+                    font-size: calc(var(--sum1) * 100vw + (var(--sum3)) );
+                }
+            }
+
+            @media (min-width: 1440px) { 
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+
+            img {
+                margin-bottom: 10px;
+            }
+        
+        </style>
+    </head>
+
+ <body>
+    <div id="site-wrapper">
+        <main>
+            <div class="block-8-high-4 wrap">
+                
+                <div class="lh-col">
+                    <article>
+                        <img src="images/work/bh-museum-one-all.png" />
+                        <p>Brighton & Hove Museums</p>
+                    <article>
+                </div>
+                
+                <div class="rh-col">
+                    <article>
+                        <img src="images/work/propellernet.png" />
+                        <p>propellernet</p>
+                    </article>
+                    <article>
+                        <img src="images/work/new-scientis-academy.png" />
+                        <p>New Scientist Academy</p>
+                    </article>
+                </div>
+            </div>
+        </main>
+    </div>
+ </body>   

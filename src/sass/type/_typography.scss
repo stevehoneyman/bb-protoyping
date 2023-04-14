@@ -1,0 +1,8 @@
+/* typography: basic type rules to be inherited throughout site
+--------------------------------------------------------------------------------------------------------------------------*/
+h1,
+h2,
+h3,
+h4 {
+    line-height: var(--lh-small);
+}

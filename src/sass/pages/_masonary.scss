@@ -1,0 +1,94 @@
+/* work:
+---------------------------------------------------------------------------------------------------------------- */
+
+.grid {
+    padding: 3rem 0;
+    background: var(--off-white);
+    // background-color: red;
+    width: calc(100% + 20px);
+
+    /* ---- grid-item ---- */
+    .grid-sizer,
+    .grid-item {
+        @media (min-width: 768px) {
+            width: calc(50% - 20px);
+        }
+
+        @media (min-width: 1024px) {
+            width: calc(33.33% - 20px);
+        }
+    }
+
+    /* clearfix */
+    .grid:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .grid-item {
+        margin-bottom: 20px;
+        position: relative;
+        aspect-ratio: 4/3;
+        overflow: hidden;
+
+        > img {
+            aspect-ratio: 4/3;
+            width: 100%;
+            height: auto;
+        }
+
+        .excerpt {
+            position: absolute;
+            width: 100%;
+            padding: 0.5rem 1rem 20px 0.5rem;
+            margin: 0;
+            left: 0;
+            bottom: 0;
+            background: white;
+            z-index: 1;
+        }
+
+        &.lg {
+            aspect-ratio: 4 / 3;
+
+            @media (min-width: 768px) {
+                width: 100%;
+            }
+
+            @media (min-width: 1024px) {
+                width: calc(66.66% - 20px);
+            }
+        }
+
+        &.port {
+            aspect-ratio: 1.5/2.315;
+
+            img {
+                aspect-ratio: 1.5/2.25;
+                object-fit: cover;
+            }
+        }
+
+        &.full {
+            width: calc(100% - 20px);
+            aspect-ratio: 260 / 111;
+
+            img {
+                aspect-ratio: 260 / 111;
+                object-fit: cover;
+            }
+        }
+
+        &.lg-r {
+            @media (min-width: 768px) {
+                width: 100%;
+            }
+
+            @media (min-width: 1024px) {
+                width: calc(66.66% - 20px);
+                //aspect-ratio: 2 / 1.1;
+            }
+        }
+    }
+}

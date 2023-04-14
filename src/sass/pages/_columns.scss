@@ -1,0 +1,94 @@
+/* work:
+---------------------------------------------------------------------------------------------------------------- */
+
+.columns {
+    .grid {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        background-color: var(--off-white);
+        columns: 1;
+
+        @media (min-width: 640px) {
+            margin-bottom: 3rem;
+            padding-right: 4.86%;
+            padding-left: 4.86%;
+        }
+
+        @media (min-width: 768px) {
+            columns: 2;
+        }
+
+        @media (min-width: 880px) {
+            margin-bottom: 60px;
+            padding-right: 4.86%;
+            padding-left: 4.86%;
+        }
+
+        @media (min-width: 960px) {
+            columns: 3;
+        }
+
+        article {
+            margin: 2rem;
+
+            @media (min-width: 768px) {
+                margin: 0 10px 2rem;
+            }
+        }
+
+        img {
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+
+        .excerpt {
+            font-family: var(--font-titling);
+            font-size: 1rem;
+            line-height: 1.2;
+        }
+
+        @media (min-width: 440px) {
+            .excerpt {
+                --a: 16;
+                --b: 24;
+                --x: 440;
+                --y: 1440;
+
+                --sum1: calc((var(--b) - var(--a)) / (var(--y) - var(--x)));
+                --sum2: calc(var(--sum1) * var(--x));
+                --sum3: calc(var(--a) - var(--sum2)) / 16 * 1rem;
+
+                font-size: calc(var(--sum1) * 100vw + (var(--sum3)));
+            }
+        }
+
+        @media (min-width: 1440px) {
+            .excerpt {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* specifics
+        --------------------------------------------------------------------------------------------------------- */
+        .full {
+            // styles
+        }
+
+        /* 4-4-4
+        --------------------------------------------------------------------------------------------------------- */
+
+        /* 8-high-4
+        --------------------------------------------------------------------------------------------------------- */
+
+        /* 4-high-4-4
+        --------------------------------------------------------------------------------------------------------- */
+
+        /* 4-8-high
+        --------------------------------------------------------------------------------------------------------- */
+
+        /* 4-4-4-high
+        --------------------------------------------------------------------------------------------------------- */
+    }
+}
